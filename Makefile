@@ -31,6 +31,24 @@ push/azure-management:
 	echo "pushing image: ${IMAGE}"
 	docker push ${IMAGE}
 
+
+	# -e GITHUB_TOKEN=${GITHUB_TOKEN} \
+	# -e GITHUB_USER=${GITHUB_USER} \
+	# -e GITHUB_API_URL=${GITHUB_API_URL} \
+	# -e GITHUB_CODESPACE_TOKEN=${GITHUB_CODESPACE_TOKEN} \
+	# -e GITHUB_GRAPHQL_URL=${GITHUB_GRAPHQL_URL} \
+	# -e GITHUB_SERVER_URL=${GITHUB_SERVER_URL} \
+	# -e GITHUB_REPOSITORY=${GITHUB_REPOSITORY} \
+	# -e CODEPSACE_NAME=${CODEPSACE_NAME} \
+	# -e CLOUDENV_ENVIRONMENT=${CLOUDENV_ENVIRONMENT} \
+	# -e HOSTNAME=${HOSTNAME} \
+	# -e GIT_ASKPASS=${GIT_ASKPASS} \
+	# -v ${GIT_ASKPASS}:${GIT_ASKPASS} \
+	# -h ${HOSTNAME} \
+	# -e HOME=${HOME} \
+  # --env-file=/workspaces/ce-ipam/sample.env \
+	
+
 run/azure-management:
 	@touch -f $$HOME/.gitconfig
 	docker run --rm -it \

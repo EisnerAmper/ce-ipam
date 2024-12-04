@@ -1,3 +1,14 @@
 FROM ghcr.io/eisneramper/ce-cicd-utils:0.0.2-featureverifytags.1.3cc40ad
 
-RUN pwsh Install-Module -Name Az -Repository PSGallery -Force
+# install az module for powershell linux
+RUN pwsh -NoLogo -NonInteractive -Command "Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force -AcceptLicense -SkipPublisherCheck; Get-InstalledModule Az"
+
+# install bicep for linux
+ADD https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64 /usr/local/bin/bicep
+RUN chmod +x /usr/local/bin/bicep && bicep --help
+
+# on windows to use the graph sdk, run: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# on windows you can set scope to CurrentUser or AllUsers depending on your needs. really does not matter in container...
+# be sure to use the same container user for build as runtime or use "AllUsers" if you cannot control this
+RUN pwsh -NoLogo -NonInteractive -Command "Install-Module -Name Microsoft.Graph -Scope CurrentUser -Repository PSGallery -Force -AcceptLicense -SkipPublisherCheck; Get-InstalledModule Microsoft.Graph"
