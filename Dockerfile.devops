@@ -1,0 +1,3 @@
+FROM ghcr.io/eisneramper/ce-cicd-utils:0.0.2-featureverifytags.1.3cc40ad
+
+RUN pwsh Install-Module -Name Az -Repository PSGallery -Force
