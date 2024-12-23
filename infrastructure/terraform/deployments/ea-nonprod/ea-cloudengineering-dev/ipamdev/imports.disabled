@@ -1,0 +1,49 @@
+#import {
+#	id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk"
+#	to = azurerm_resource_group.ipam_resource_group
+#}
+
+#import {
+#	id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.Web/serverfarms/ipamdev-asp-obf56ae2gqywk"
+#	to = azurerm_service_plan.ipam_service_plan
+#}
+
+#import {
+#	id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.DocumentDB/databaseAccounts/ipamdev-dbacct-obf56ae2gqywk"
+#  to = azurerm_cosmosdb_account.ipam_cosmos_db_account
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.KeyVault/vaults/ipamdev-kv-obf56ae2gqywk"
+#  to = azurerm_key_vault.ipam_key_vault
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.OperationalInsights/workspaces/ipamdev-law-obf56ae2gqywk"
+#  to = azurerm_log_analytics_workspace.ipam_log_analytics
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ipamdev-mi-obf56ae2gqywk"
+#  to = azurerm_user_assigned_identity.ipam_engine_managed_identity
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/microsoft.insights/components/ipamdev-obf56ae2gqywk"
+#  to = azurerm_application_insights.ipam_application_insights
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.Web/sites/ipamdev-obf56ae2gqywk"
+#  to = azurerm_linux_function_app.ipam_engine_function_app
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.ContainerRegistry/registries/ipamdevacrobf56ae2gqywk"
+#  to = azurerm_container_registry.ipam_container_registry
+#}
+
+#import {
+#  id = "/subscriptions/70e512a1-e3fa-4f34-a787-27217f8b5a87/resourceGroups/ipamdev-rg-obf56ae2gqywk/providers/Microsoft.Storage/storageAccounts/ipamdevstgobf56ae2gqywk"
+#  to = azurerm_storage_account.ipam_storage_account
+#}

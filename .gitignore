@@ -17,3 +17,10 @@ dist
 
 # IPAM Engine
 __pycache__
+
+# terraform
+#
+**/.terraform
+**/.terraform**
+
+**/.vscode/settings.json
